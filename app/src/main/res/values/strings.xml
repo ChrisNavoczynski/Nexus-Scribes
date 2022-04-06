@@ -3,4 +3,6 @@
     <string name="welcome_to">Welcome to</string>
     <string name="nexus_title">Nexus</string>
     <string name="scribes_title">Scribes</string>
+    <string name="embark_button">Embark</string>
+    <string name="pen_icon">pen_icon</string>
 </resources>
