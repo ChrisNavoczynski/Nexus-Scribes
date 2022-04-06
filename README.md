@@ -1,7 +1,7 @@
 # Nexus-Scribes
 
 ## Description
-An android mobile app designed for indie authors; particuarily for those writing in the Science Fiction or Fantasy genres.
+An android mobile app designed for indie authors; particularly for those writing in the Science Fiction or Fantasy genres.
 
 ## Purpose and Goals of the App
 - To provide more exposure for self-published authors to promote their books
