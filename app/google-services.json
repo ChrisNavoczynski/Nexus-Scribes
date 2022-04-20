@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1036276039000",
+    "project_id": "nexus-scribes",
+    "storage_bucket": "nexus-scribes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036276039000:android:60049e56dc8d833de3f92d",
+        "android_client_info": {
+          "package_name": "com.example.nexus_scribes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036276039000-fhb676gqmgiajlaoocf54l0eqmnt1ej1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw7ZoJq6iU0bTZBMydVaDVlDGZXbH_FLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036276039000-fhb676gqmgiajlaoocf54l0eqmnt1ej1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

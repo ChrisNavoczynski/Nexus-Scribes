@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="dark_mod_orange">#75563a</color>
+    <color name="muted_blue">#1C448E</color>
     <color name="dark_mod_blue">#3A5975</color>
     <color name="pale_blue">#91B7C7</color>
     <color name="dark_pink">#A4778B</color>
@@ -8,4 +9,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="form_parchment">#FCF5E5</color>
+    <color name="light_gray">#DCDCDC</color>
 </resources>

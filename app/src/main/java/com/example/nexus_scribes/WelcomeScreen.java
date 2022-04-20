@@ -1,10 +1,11 @@
-package com.example.myapplication;
+package com.example.nexus_scribes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+
 
 public class WelcomeScreen extends AppCompatActivity {
 

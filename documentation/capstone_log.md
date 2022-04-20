@@ -32,7 +32,7 @@ _2 hours_
 
 
 ## Week 4/3/2022 - 4/9/2022
-### Total Hours:
+### Total Hours: 10
 
 __April 4th 2022__ :
 _2 hours_
@@ -46,4 +46,33 @@ _4 hours_
 - Connected the __WelcomeScreen to the next Activity
 - Created __Pull Request #1__ to close __Issue #1__
 
-#### Milestone 1 Complete 
+#### Milestone 1 Complete
+
+__April 7th 2022__
+_4 hours_
+- Worked on the LogIn/Create New Profile Activity (S2)
+- Setup Firestore/Firebase to the Project
+- Updated the build.gradle to reflect dependencies
+- Worked on the login_newProfile.xml layout
+
+## Week 4/9/2022 - 4/15/2022
+### Total Hours: 
+
+__April 9th 2022__
+_8 hours_
+- Completed the login_newProfile.xml layout
+- Created the Login_NewProfile Class
+  - Created the Form for Login
+  - Created the Switch to New Profile
+
+#### Milestone 2 Complete  
+  
+__April 10th 2022__
+_8 hours_
+- Worked on the create_profile.xml layout
+
+__April 12th 2022__
+_8 hours_
+- Finishing touches on the create_profile.xml layout
+- Created the Constants Class
+- 75% coding completion of the CreateProfile java Class

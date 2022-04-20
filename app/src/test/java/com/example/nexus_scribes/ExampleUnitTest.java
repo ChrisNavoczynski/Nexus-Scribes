@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.nexus_scribes;
 
 import org.junit.Test;
 
