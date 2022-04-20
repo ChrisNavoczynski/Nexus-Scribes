@@ -3,10 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <gradient
         android:type="radial"
-        android:gradientRadius="250%p"
-        android:startColor="@color/white"
+        android:gradientRadius="400%"
+        android:startColor="#91B7C7"
         android:centerColor="#1C448E"
-        android:endColor="@color/black" />
+        android:endColor="@color/black"
+        />
+    <corners android:radius="20dp"/>
 
-    <corners android:radius="10dp" />
 </shape>
