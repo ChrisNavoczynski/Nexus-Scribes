@@ -41,7 +41,7 @@
     <string name="pen_name_disclaimer">Note: A provided Pen Name will replace your otherwise defaulted Full Name when displayed</string>
     <string name="photo_is_required">Photo is Required</string>
     <string name="full_name_error_text">Full Name is Required</string>
-    <string name="email_error_text">Email Address is Required</string>
+    <string name="email_error_text">Email Address is Required or invalid</string>
     <string name="dob_error_text"><![CDATA[Required & Must be 18 or Older]]></string>
     <string name="user_name_error_text">User Name Required.</string>
     <string name="password_error_text">Password is Required</string>
@@ -49,4 +49,7 @@
     <string name="symbols_verify">^(?=.*[_@#!$%^.()]).*$</string>
     <string name="numbers_verify">(.*[0-9].*)</string>
     <string name="caps_verify">(.*[A-Z].*)</string>
+    <string name="menu_icon">Menu Icon</string>
+    <string name="navbar_nexus_scribes">Nexus Scribes</string>
+    <string name="navigate_home">Navigate Home</string>
 </resources>
