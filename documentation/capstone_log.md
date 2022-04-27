@@ -56,7 +56,7 @@ _4 hours_
 - Worked on the login_newProfile.xml layout
 
 ## Week 4/9/2022 - 4/15/2022
-### Total Hours: 
+### Total Hours: 20
 
 __April 9th 2022__
 _8 hours_
@@ -72,7 +72,29 @@ _8 hours_
 - Worked on the create_profile.xml layout
 
 __April 12th 2022__
-_8 hours_
+_10 hours_
 - Finishing touches on the create_profile.xml layout
 - Created the Constants Class
-- 75% coding completion of the CreateProfile java Class
+- 30% coding completion of the CreateProfile java Class
+
+## Week 4/16/2022 - 4/22/2022
+### Total Hours: 
+
+__April 18th 2022__
+_10 hours_
+- Updated the create_profile.xml layout
+- 80% coding completion of the CreateProfile java Class
+
+__April 19th 2022__
+_10 hours_
+- Completed the CreateProfile java Class
+- Data successfully stored in Firebase Auth and Firestore
+- Updated the Login_NewProfile java Class
+
+#### Milestone 3 Complete 
+
+__April 20th 2022__
+__00 hours__
+- Created Pull Request that closes Issues 2 and 9 
+- Began building/coding home_page.xml and HomePage java Class
+

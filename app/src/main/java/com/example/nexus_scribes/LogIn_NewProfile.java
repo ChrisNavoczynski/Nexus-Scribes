@@ -1,9 +1,12 @@
 package com.example.nexus_scribes;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Patterns;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -51,15 +54,17 @@ public class LogIn_NewProfile extends AppCompatActivity {
                 .whereEqualTo(Constants.KEY_PASSWORD, binding.etLogInPassword.getText().toString())
                 .get()
                 .addOnCompleteListener(task -> {
-                    showToast("Successful Log In!");
                     if(task.isSuccessful() && task.getResult() != null
                             && task.getResult().getDocuments().size() > 0) {
+                        showToast("Successful Log In!");
                         Intent intent = new Intent(getApplicationContext(), HomePage.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intent);
                     } else {
                         loading(false);
                         showToast("Log-In Failed: Email and/or Password is incorrect");
+                        finish();
+                        startActivity(getIntent());
                     }
                 });
     }
@@ -82,7 +87,13 @@ public class LogIn_NewProfile extends AppCompatActivity {
     }
 
     private void showToast(String message) {
-        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+        Toast toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+        View view = toast.getView();
+        view.setBackgroundResource(R.drawable.toast_background);
+        TextView text = view.findViewById(android.R.id.message);
+        text.setTextColor(Color.parseColor("#FFFFFF"));
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
     }
 
     private void loading(Boolean isLoading) {

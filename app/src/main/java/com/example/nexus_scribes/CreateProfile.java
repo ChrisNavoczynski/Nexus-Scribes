@@ -1,5 +1,7 @@
 package com.example.nexus_scribes;
 
+import static com.example.nexus_scribes.R.color.dark_mod_blue;
+
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -14,8 +16,10 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Base64;
 import android.util.Patterns;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.DatePicker;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -88,7 +92,13 @@ public class CreateProfile extends AppCompatActivity {
     }
 
     private void showToast(String message) {
-        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+        Toast toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+                View view = toast.getView();
+                view.setBackgroundResource(R.drawable.toast_background);
+                TextView text = view.findViewById(android.R.id.message);
+                text.setTextColor(Color.parseColor("#FFFFFF"));
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
     }
 
     private void createProfile() {
