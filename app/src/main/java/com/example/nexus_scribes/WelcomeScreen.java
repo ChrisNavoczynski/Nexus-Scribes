@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-
 public class WelcomeScreen extends AppCompatActivity {
 
     @Override
@@ -15,7 +14,7 @@ public class WelcomeScreen extends AppCompatActivity {
         this.setTitle("Welcome");
         setContentView(R.layout.welcome_screen);
 
-        Button btn_embark = (Button) findViewById(R.id.embarkButton);
+        Button btn_embark = findViewById(R.id.embarkButton);
         btn_embark.setOnClickListener(view ->
                 startActivity(new Intent(WelcomeScreen.this,
                 LogIn_NewProfile.class)));

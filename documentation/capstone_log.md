@@ -56,7 +56,7 @@ _4 hours_
 - Worked on the login_newProfile.xml layout
 
 ## Week 4/9/2022 - 4/15/2022
-### Total Hours: 20
+### Total Hours: 26
 
 __April 9th 2022__
 _8 hours_
@@ -78,7 +78,7 @@ _10 hours_
 - 30% coding completion of the CreateProfile java Class
 
 ## Week 4/16/2022 - 4/22/2022
-### Total Hours: 
+### Total Hours: 24
 
 __April 18th 2022__
 _10 hours_
@@ -94,7 +94,26 @@ _10 hours_
 #### Milestone 3 Complete 
 
 __April 20th 2022__
-__00 hours__
+_4 hours_
 - Created Pull Request that closes Issues 2 and 9 
 - Began building/coding home_page.xml and HomePage java Class
 
+## Week 4/23/2022 - 4/29/2022
+### Total Hours: 
+
+__April 23rd 2022__
+_10 hours_
+- Completed the home_page.xml (navigation portion)
+- Created the home_toolbar.xml
+
+__April 24th 2022__
+_10 hours_
+- Completed the home_nav_drawer.xml
+- Coded the Home Page java class for navigation
+
+--April 26th 2022__
+_2 hours_
+- Connected the Navigation Drawer to all upcoming activities
+- Skeleton Pages created for all activities in the Nav drawer started
+
+#### Milestone 4 Complete
