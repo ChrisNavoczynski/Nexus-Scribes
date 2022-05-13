@@ -99,7 +99,7 @@ _4 hours_
 - Began building/coding home_page.xml and HomePage java Class
 
 ## Week 4/23/2022 - 4/29/2022
-### Total Hours: 
+### Total Hours: 22
 
 __April 23rd 2022__
 _10 hours_
@@ -117,3 +117,40 @@ _2 hours_
 - Skeleton Pages created for all activities in the Nav drawer started
 
 #### Milestone 4 Complete
+
+## Week 4/30/2022 - 5/6/2022
+### Total Hours: 22
+
+__May 1st 2022__
+_8 hours_
+- Completed the user_profile.xml page
+- Began work on the MVVM for the profile
+
+__May 2nd 2022__
+_7 hours_
+- Completed the UserProfile java class
+- Upload java class created
+
+__May 3rd 2022__
+_7 hours_
+- UserProfileModel java class created
+- UserProfileViewModel java class created
+
+## Week 5/7/2022 - 5/13
+### Total Hours: 22
+
+__May 8th 2022__
+_8 hours_
+- Worked on Issues with the Create Profile java class
+
+__May 9th 2022__
+_8 hours_
+- Completed the overhaul of the CreateProfile java class
+
+#### Milestone 5 Complete
+
+__May 10th 2022__
+_7 hours_
+- Began work on the author_gallery.xml page
+
+

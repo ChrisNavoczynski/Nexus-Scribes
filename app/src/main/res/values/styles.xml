@@ -3,4 +3,9 @@
     <style name="TextLabel" parent="TextAppearance.Design.Hint">
         <item name="android:textSize">16sp</item>
     </style>
+    
+    <style name="RoundedSquare">
+        <item name="cornerSize">20%</item>
+    </style>
+    
 </resources>

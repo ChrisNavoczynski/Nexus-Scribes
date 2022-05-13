@@ -1,27 +1,24 @@
 package com.example.nexus_scribes;
 
-import static com.example.nexus_scribes.R.color.dark_mod_blue;
-
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
+import android.content.ContentResolver;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Base64;
 import android.util.Patterns;
 import android.view.Gravity;
 import android.view.View;
+import android.webkit.MimeTypeMap;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,21 +28,22 @@ import com.example.nexus_scribes.utilities.Constants;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.StorageTask;
 
-import java.io.ByteArrayOutputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Objects;
 
 
 public class CreateProfile extends AppCompatActivity {
 
     private CreateProfileBinding binding;
-    private String encodedImage;
+    private StorageReference storageReference;
+    private Uri imageProfile;
+    private StorageTask uploadTask;
 
     private boolean
             isAtLeast8 = false,
@@ -58,6 +56,7 @@ public class CreateProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.setTitle("Create Profile");
         binding = CreateProfileBinding.inflate(getLayoutInflater());
+        storageReference = FirebaseStorage.getInstance().getReference(Constants.KEY_COLLECTIONS_USERS);
         setContentView(binding.getRoot());
         setListeners();
     }
@@ -77,11 +76,8 @@ public class CreateProfile extends AppCompatActivity {
             datePickerDialog.show();
         });
 
-        binding.profileImage.setOnClickListener(view -> {
-            Intent intent = (new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI));
-            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            pickImage.launch(intent);
-        });
+        binding.profileImage.setOnClickListener(view ->
+                pickImage.launch("image/*"));
 
         binding.profileSubmitButton.setOnClickListener(view ->{
             if (isValidProfile()) {
@@ -93,12 +89,12 @@ public class CreateProfile extends AppCompatActivity {
 
     private void showToast(String message) {
         Toast toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
-                View view = toast.getView();
-                view.setBackgroundResource(R.drawable.toast_background);
-                TextView text = view.findViewById(android.R.id.message);
-                text.setTextColor(Color.parseColor("#FFFFFF"));
-                toast.setGravity(Gravity.CENTER, 0, 0);
-                toast.show();
+        View view = toast.getView();
+        view.setBackgroundResource(R.drawable.toast_background);
+        TextView text = view.findViewById(android.R.id.message);
+        text.setTextColor(Color.parseColor("#FFFFFF"));
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
     }
 
     private void createProfile() {
@@ -112,27 +108,46 @@ public class CreateProfile extends AppCompatActivity {
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         showToast("Success! Profile Created!");
-                        String userID = Objects.requireNonNull(myAuth.getCurrentUser()).getUid();
-                        DocumentReference documentReference = database.collection(Constants.KEY_COLLECTIONS_USERS)
-                                .document(userID);
-                        HashMap<String, Object> user = new HashMap<>();
-                        user.put(Constants.KEY_FULL_NAME, binding.etFullName.getText().toString());
-                        user.put(Constants.KEY_EMAIL, binding.etEmail.getText().toString());
-                        user.put(Constants.KEY_USER_AGE, binding.ageDisplay.getText().toString());
-                        user.put(Constants.KEY_PASSWORD, binding.etPassword.getText().toString());
-                        user.put(Constants.KEY_USER_BIO, binding.etBio.getText().toString());
-                        user.put(Constants.KEY_PEN_NAME, binding.etPenName.getText().toString());
-                        user.put(Constants.KEY_TWITTER_URL, binding.etTwitter.getText().toString());
-                        user.put(Constants.KEY_FACEBOOK_URL, binding.etFacebook.getText().toString());
-                        user.put(Constants.KEY_INSTAGRAM_URL, binding.etInstagram.getText().toString());
-                        user.put(Constants.KEY_USER_IMAGE, encodedImage);
-                        documentReference.set(user);
+                        String userId = Objects.requireNonNull(myAuth.getCurrentUser()).getUid();
+                        DocumentReference documentReference = database
+                                .collection(Constants.KEY_COLLECTIONS_USERS)
+                                .document(userId);
+                        StorageReference fileReference = storageReference.child(binding.etFullName.getText().toString()
+                            + "ProfilePic" + "." + getFileExtension(imageProfile));
+                        uploadTask = fileReference.putFile(imageProfile)
+                                .addOnSuccessListener(taskSnapshot ->
+                                storageReference.child(binding.etFullName.getText().toString() + "ProfilePic"
+                            + "." + getFileExtension(imageProfile)).getDownloadUrl()
+                                        .addOnCompleteListener(task2 -> {
+                                    Uri downloadUri = task2.getResult();
+                                    UploadUser uploadUser =
+                                        new UploadUser(
+                                                userId.trim(),
+                                                binding.etFullName.getText().toString(),
+                                                binding.etBio.getText().toString(),
+                                                binding.etPenName.getText().toString(),
+                                                downloadUri.toString(),
+                                                binding.etEmail.getText().toString(),
+                                                binding.etPassword.getText().toString(),
+                                                binding.ageDisplay.getText().toString(),
+                                                binding.etFacebook.getText().toString(),
+                                                binding.etTwitter.getText().toString(),
+                                                binding.etInstagram.getText().toString()
+                                    );
+                            documentReference.set(uploadUser);
+                        }));
                         startActivity(new Intent(getApplicationContext(), HomePage.class));
                     } else {
                         showToast("Error: This User already has an account");
                         loading(false);
                     }
                 });
+    }
+
+    private String getFileExtension(Uri uri) {
+        ContentResolver cR = getContentResolver();
+        MimeTypeMap mine = MimeTypeMap.getSingleton();
+        return mine.getExtensionFromMimeType(cR.getType(uri));
     }
 
     public static boolean IsEmailValid(CharSequence cEmail) {
@@ -169,35 +184,18 @@ public class CreateProfile extends AppCompatActivity {
         return age;
     }
 
-    private String encodedImage(Bitmap bitmap) {
-        int previewWidth = 150;
-        int previewHeight = bitmap.getHeight() * previewWidth / bitmap.getWidth();
-        Bitmap previewBitmap = Bitmap.createScaledBitmap(bitmap, previewWidth, previewHeight, false);
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        previewBitmap.compress(Bitmap.CompressFormat.JPEG, 50, byteArrayOutputStream);
-        byte[] bytes = byteArrayOutputStream.toByteArray();
-        return Base64.encodeToString(bytes, Base64.DEFAULT);
-    }
-
-    private final ActivityResultLauncher<Intent> pickImage = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(),
-            result -> {
-                if (result.getResultCode() == RESULT_OK) {
-                    if(result.getData() != null) {
-                        Uri imageUrl = result.getData().getData();
-                        try {
-                            InputStream inputStream = getContentResolver().openInputStream(imageUrl);
-                            Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-                            binding.profileImage.setImageBitmap(bitmap);
-                            binding.textAddImage.setVisibility(View.GONE);
-                            encodedImage = encodedImage(bitmap);
-                        } catch (FileNotFoundException err) {
-                            err.printStackTrace();
-                        }
+    ActivityResultLauncher<String> pickImage = registerForActivityResult(new ActivityResultContracts.GetContent(),
+            new ActivityResultCallback<Uri>() {
+                @Override
+                public void onActivityResult(Uri result) {
+                    if (result != null) {
+                        binding.textAddImage.setVisibility(View.GONE);
+                        binding.profileImage.setImageURI(result);
+                        imageProfile = result;
                     }
                 }
-            }
-    );
+            });
+
 
     @SuppressLint("ResourceType")
     private void passWordCheck() {
@@ -238,11 +236,7 @@ public class CreateProfile extends AppCompatActivity {
     }
 
     private Boolean isValidProfile() {
-        if (encodedImage == null) {
-            binding.imageError.setVisibility(View.VISIBLE);
-            return false;
-        }
-        else if (binding.etFullName.length() == 0) {
+        if (binding.etFullName.length() == 0) {
             binding.fullNameError.setVisibility(View.VISIBLE);
             return false;
         }
