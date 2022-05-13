@@ -52,4 +52,6 @@
     <string name="menu_icon">Menu Icon</string>
     <string name="navbar_nexus_scribes">Nexus Scribes</string>
     <string name="navigate_home">Navigate Home</string>
+    <string name="profile_pic">Profile Pic</string>
+    <string name="about_the_author">About the Author:</string>
 </resources>
