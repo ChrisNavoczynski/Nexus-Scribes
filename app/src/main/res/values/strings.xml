@@ -54,4 +54,6 @@
     <string name="navigate_home">Navigate Home</string>
     <string name="profile_pic">Profile Pic</string>
     <string name="about_the_author">About the Author:</string>
+    <string name="author_profile_pic">Author Profile Pic</string>
+    <string name="the_authors_gallery">The Authors Gallery</string>
 </resources>

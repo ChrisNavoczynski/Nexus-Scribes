@@ -1,14 +1,15 @@
 package com.example.nexus_scribes;
 
-import com.example.nexus_scribes.utilities.Constants;
 
-public class UploadUser {
+import java.io.Serializable;
+
+public class UploadUser implements Serializable {
 
     private String UserId;
-    private String fullName;
-    private String userBio;
-    private String imageProfile;
-    private String penName;
+    public String fullName;
+    public String userBio;
+    public String imageProfile;
+    public String penName;
     private String email;
     private String password;
     private String userAge;
