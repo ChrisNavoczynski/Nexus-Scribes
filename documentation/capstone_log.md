@@ -136,7 +136,7 @@ _7 hours_
 - UserProfileModel java class created
 - UserProfileViewModel java class created
 
-## Week 5/7/2022 - 5/13
+## Week 5/7/2022 - 5/13/2022
 ### Total Hours: 22
 
 __May 8th 2022__
@@ -153,4 +153,31 @@ __May 10th 2022__
 _7 hours_
 - Began work on the author_gallery.xml page
 
+## Week 5/14/2022 - 5/20/2022
+### Total Hours: 35
+
+__May 14th 2022__
+_10 hours_
+- Worked on the author_gallery.xml page
+- Worked on the author_card. xml page
+
+__May 15th 2022__
+_10 hours_
+- Started the AuthorGallery java class
+- AuthorAdapter class created
+
+__May 16th 2022__
+_6 hours_
+- Fixed work on the AuthorAdapter 
+
+__May 17th 2022__
+_4 hours_
+- AuthorGallery Completed
+
+__May 18th 2022__
+_5 hours_
+- author_detail.xml created
+- Author Detail java class created
+
+#### Milestone 6 Complete
 

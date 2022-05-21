@@ -52,6 +52,11 @@
             android:exported="false"
             android:theme="@style/Theme.NexusScribes.Menu"/>
         <activity
+            android:name=".AuthorDetail"
+            android:exported="false"
+            android:theme="@style/Theme.NexusScribes.Menu"/>
+
+        <activity
             android:name=".BookGallery"
             android:exported="false"
             android:theme="@style/Theme.NexusScribes.Menu"/>
