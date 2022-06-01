@@ -181,3 +181,48 @@ _5 hours_
 
 #### Milestone 6 Complete
 
+## Week 5/21/2022 - 5/27/2022
+### Total Hours: 22
+
+__May 22nd 2022__
+_8 hours_
+- Updated the UserProfile list
+
+__May 23rd 2022__
+_8 hours_
+- Planned information for the book collection
+- Created power point for First Demo presentation
+
+__May 24th 2022__
+_1 hour_
+- Presented current status of Project to advisors
+
+__May 27th 2022__
+_5 hours_
+- Created add_book.xml layout
+- Began work on AddBook Java Class
+
+## Week 5/28/2022 - 6/3/2022
+### Total Hours:
+
+__May 29th 2022__
+_10 hours_
+- Created the Book Model Java class
+- Created the BookViewModel Java class
+- Created the UploadBook Firestore Java class
+
+__May 30th 2022__
+_8 hours_
+- Created the BookAdapter Java class
+- Completed the AddBook Java Class
+
+__May 31st 2022__
+_10 hours_
+- Created the book_card.xml recycler layout
+- Created the book_gallery.xml layout  
+- Created the book_detail.xml layout
+- Completed the Book(Publication)Gallery Java class
+- Completed the BookDetail Java class
+
+#### Milestone 7 Complete 
+_(Note: Milestone 7 consisted of 3 Issues)_

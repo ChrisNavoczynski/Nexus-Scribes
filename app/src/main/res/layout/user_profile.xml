@@ -122,6 +122,49 @@
                     android:layout_marginEnd="20dp"
                     android:textSize="20sp"
                     android:textColor="@color/dark_mod_blue" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="30dp"
+                android:paddingBottom="30dp"
+                android:orientation="vertical"
+                android:background="@drawable/background_edit_text"
+                android:elevation="@dimen/cardview_default_elevation">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textAlignment="center"
+                    android:text="Add a Publication"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/titles"
+                    android:textColor="@color/black"
+                    android:background="@drawable/background_form_banner" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/newBookBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:background="@drawable/custom_button"
+                    android:textColor="@color/black"
+                    android:text="New Book"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/titles" />
             </LinearLayout>
 
             <ImageView

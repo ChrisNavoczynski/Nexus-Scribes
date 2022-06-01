@@ -34,7 +34,7 @@
                         android:layout_margin="10dp"
                         android:text="@string/the_authors_gallery"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="26sp"
                         android:textStyle="bold"
                         android:textAlignment="center"/>
 

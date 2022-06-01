@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.nexus_scribes.R;
-import com.example.nexus_scribes.UploadUser;
+import com.example.nexus_scribes.firestoreData.UploadUser;
 import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
@@ -47,8 +47,6 @@ public class AuthorAdapter extends RecyclerView.Adapter<AuthorAdapter.AuthorView
         } else {
             holder.fullName.setText(author.fullName);
         }
-/*        String briefBio = author.userBio.substring(0, 10);
-        holder.userBio.setText(String.format("%s...", briefBio));*/
         Picasso.get().load(author.getImageProfile())
                 .resize(90,90).into(holder.imageProfile);
 
@@ -65,7 +63,7 @@ public class AuthorAdapter extends RecyclerView.Adapter<AuthorAdapter.AuthorView
 
     public class AuthorViewHolder extends RecyclerView.ViewHolder {
 
-        TextView fullName, penName, userBio;
+        TextView fullName, penName;
         ImageView imageProfile;
 
         @SuppressLint("CutPasteId")
@@ -74,17 +72,12 @@ public class AuthorAdapter extends RecyclerView.Adapter<AuthorAdapter.AuthorView
 
             fullName = itemView.findViewById(R.id.author_name);
             penName = itemView.findViewById(R.id.author_name);
-/*            userBio = itemView.findViewById(R.id.author_bio);*/
             imageProfile = itemView.findViewById(R.id.author_pic);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    selectAuthor.selectAuthor(userArrayList.get(getAbsoluteAdapterPosition()));
-                }
-            });
+            itemView.setOnClickListener(
+                    view -> selectAuthor.selectAuthor(
+                            userArrayList.get(getAbsoluteAdapterPosition())));
 
         }
     }
-
 }

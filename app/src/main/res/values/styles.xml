@@ -7,5 +7,16 @@
     <style name="RoundedSquare">
         <item name="cornerSize">20%</item>
     </style>
+
+    <style name="BookCovers">
+        <item name="cornerSize">5%</item>
+        <item name="height">5dp</item>
+        <item name="elevation">5dp</item>
+    </style>
+
+    <style name="AuthorOneCard">
+        <item name="elevation">8dp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
     
 </resources>

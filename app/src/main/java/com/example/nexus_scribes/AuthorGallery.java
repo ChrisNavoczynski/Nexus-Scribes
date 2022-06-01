@@ -1,7 +1,6 @@
 package com.example.nexus_scribes;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,6 +12,7 @@ import android.view.View;
 
 import com.example.nexus_scribes.adapters.AuthorAdapter;
 import com.example.nexus_scribes.databinding.AuthorGalleryBinding;
+import com.example.nexus_scribes.firestoreData.UploadUser;
 import com.example.nexus_scribes.utilities.Constants;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -74,7 +74,7 @@ public class AuthorGallery extends AppCompatActivity implements AuthorAdapter.Se
     @Override
     public void selectAuthor(UploadUser uploadUser) {
         startActivity(new Intent(AuthorGallery.this,
-                AuthorDetail.class).putExtra("data", uploadUser));
+                AuthorDetail.class).putExtra("userData", uploadUser));
     }
 
     public void ClickMenu(View view) {

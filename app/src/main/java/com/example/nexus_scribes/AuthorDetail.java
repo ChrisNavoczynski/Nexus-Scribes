@@ -6,6 +6,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.nexus_scribes.firestoreData.UploadBook;
+import com.example.nexus_scribes.firestoreData.UploadUser;
 import com.squareup.picasso.Picasso;
 
 public class AuthorDetail extends AppCompatActivity {
@@ -26,7 +29,7 @@ public class AuthorDetail extends AppCompatActivity {
         Intent intent = getIntent();
 
         if(intent.getExtras() != null) {
-            UploadUser uploadUser = (UploadUser) intent.getSerializableExtra("data");
+            UploadUser uploadUser = (UploadUser) intent.getSerializableExtra("userData");
             imageProfile = uploadUser.getImageProfile();
 
             if (!uploadUser.getPenName().equals("")) {
@@ -37,7 +40,7 @@ public class AuthorDetail extends AppCompatActivity {
             tvBio.setText(uploadUser.getUserBio());
             Picasso.get().setLoggingEnabled(true);
             Picasso.get().load(imageProfile)
-                    .resize(300,300)
+                    .resize(200,200)
                     .centerCrop().into(ivProfile);
 
         }

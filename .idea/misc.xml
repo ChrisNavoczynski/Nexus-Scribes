@@ -9,8 +9,11 @@
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/background_form_banner.xml" value="0.111" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/background_nav_drawer.xml" value="0.209" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/background_title.xml" value="0.249" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/book_button.xml" value="0.261" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/custom_button.xml" value="0.249" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/date_botton.xml" value="0.1645" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/ic_book_title.xml" value="0.261" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/ic_calendar.xml" value="0.261" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/ic_email.xml" value="0.188" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/ic_facebook.xml" value="0.1" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/ic_instagram.xml" value="0.1435" />
@@ -30,10 +33,13 @@
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/ic_user_name.xml" value="0.132" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/toast_background.xml" value="0.1445" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/add_book.xml" value="0.25" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/author_card.xml" value="0.35052083333333334" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/author_detail.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/author_gallery.xml" value="0.25" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/author_list_fragment.xml" value="0.28532608695652173" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/book_card.xml" value="0.27760416666666665" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/book_detail.xml" value="0.25" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/book_gallery.xml" value="0.221875" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/chat_forum.xml" value="0.221875" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/create_profile.xml" value="0.21" />
