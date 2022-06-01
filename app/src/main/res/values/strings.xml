@@ -56,4 +56,15 @@
     <string name="about_the_author">About the Author:</string>
     <string name="author_profile_pic">Author Profile Pic</string>
     <string name="the_authors_gallery">The Authors Gallery</string>
+    <string name="add_your_publication">Add Your Publication</string>
+    <string name="book_title_error_text">Book title is required</string>
+    <string name="synopsis_error_text">At least one line about the book is required</string>
+    <string name="book_synopsis">Book Synopsis</string>
+    <string name="book_title">Book Title</string>
+    <string name="book_cover_image">Book Cover Image</string>
+    <string name="publish_btn">PUBLISH</string>
+    <string name="book_cover_pic">Book Cover pic</string>
+    <string name="the_publication_gallery">The Publication Gallery</string>
+    <string name="Author_add_name_hint">Meet the Author</string>
+    <string name="book_synopsis_text">Book Synopsis</string>
 </resources>

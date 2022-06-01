@@ -1,8 +1,10 @@
 package com.example.nexus_scribes.models;
 
+import com.example.nexus_scribes.firestoreData.UploadBook;
 import com.example.nexus_scribes.firestoreData.UploadUser;
 import com.example.nexus_scribes.utilities.Constants;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -15,22 +17,25 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
-public class  UserProfileModel {
+public class BookModel {
+
     private FirebaseFirestore fb;
     private List<ListenerRegistration> listener;
     private String userId;
 
-    public UserProfileModel() {
+
+    public BookModel() {
         fb = FirebaseFirestore.getInstance();
         listener = new ArrayList<>();
         FirebaseAuth myAuth = FirebaseAuth.getInstance();
         userId = myAuth.getCurrentUser().getUid();
     }
 
-    public void getProfileInformation(Consumer<DocumentSnapshot> dataChangedCallBack,
-                               Consumer<FirebaseFirestoreException> dataErrorCallback){
+    public void getBookInformation(Consumer<DocumentSnapshot> dataChangedCallBack,
+                                      Consumer<FirebaseFirestoreException> dataErrorCallback) {
         ListenerRegistration listenerRegistration =
-                fb.collection(Constants.KEY_COLLECTIONS_USERS).document(userId)
+                fb.collection(Constants.KEY_COLLECTIONS_BOOKS)
+                        .document(userId)
                         .addSnapshotListener((queryDocumentSnapshots, e) -> {
                             if (e != null) {
                                 dataErrorCallback.accept(e);
@@ -40,24 +45,18 @@ public class  UserProfileModel {
         listener.add(listenerRegistration);
     }
 
-    public void updateProfileById(UploadUser profile) {
-        DocumentReference profileRef =
-                fb.collection(Constants.KEY_COLLECTIONS_USERS).document(profile.getUserId());
-        Map<String, Object> user = new HashMap<>();
-        user.put(Constants.KEY_USER_IMAGE, profile.getImageProfile());
-        user.put(Constants.KEY_FULL_NAME, profile.getFullName());
-        user.put(Constants.KEY_PEN_NAME, profile.getPenName());
-        user.put(Constants.KEY_USER_BIO, profile.getUserBio());
-        user.put(Constants.KEY_EMAIL, profile.getEmail());
-        user.put(Constants.KEY_PASSWORD, profile.getPassword());
-        user.put(Constants.KEY_USER_AGE, profile.getUserAge());
-        user.put(Constants.KEY_FACEBOOK_URL, profile.getFacebookUrl());
-        user.put(Constants.KEY_TWITTER_URL, profile.getTwitterUrl());
-        user.put(Constants.KEY_INSTAGRAM_URL, profile.getInstagramUrl());
-        profileRef.update(user);
-    }
+    public void updateBookById(UploadBook book) {
+        DocumentReference bookRef =
+                fb.collection(Constants.KEY_COLLECTIONS_BOOKS).document(book.getBookId());
+        Map<String, Object> books = new HashMap<>();
+        books.put(Constants.KEY_USER_IMAGE, book.getImageProfile());
+        books.put(Constants.KEY_FULL_NAME, book.getFullName());
+        books.put(Constants.KEY_PEN_NAME, book.getPenName());
+        books.put(Constants.KEY_BOOK_IMAGE, book.getBookImage());
+        books.put(Constants.KEY_BOOK_TITLE, book.getBookTitle());
+        books.put(Constants.KEY_BOOK_SYNOPSIS, book.getBookSynopsis());
+        books.put(Constants.KEY_USER_BIO, book.getUserBio());
 
-    public void clear() {
-        listener.forEach(ListenerRegistration::remove);
+        bookRef.update(books);
     }
 }

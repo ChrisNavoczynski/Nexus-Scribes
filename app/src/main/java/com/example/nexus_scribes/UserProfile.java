@@ -3,11 +3,13 @@ package com.example.nexus_scribes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.example.nexus_scribes.databinding.UserProfileBinding;
+import com.example.nexus_scribes.firestoreData.UploadUser;
 import com.example.nexus_scribes.utilities.Constants;
 
 import com.example.nexus_scribes.viewModels.UserProfileViewModel;
@@ -70,8 +72,14 @@ public class UserProfile extends AppCompatActivity {
                     binding.userDisplayBio.setText(userBio);
                 }
         );
+        setListeners();
     }
 
+    private void setListeners() {
+        binding.newBookBtn.setOnClickListener(view ->
+                startActivity(new Intent(UserProfile.this,
+                        AddBook.class)));
+    }
 
     public void ClickMenu(View view) {
         HomePage.openDrawer(binding.drawerLayout);

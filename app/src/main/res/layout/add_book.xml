@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".AddBook">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:background="@drawable/background_banner"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:id="@+id/nexus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/tech"
+                    android:text="@string/nexus_title"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/icon_banner"
+                    android:layout_width="45dp"
+                    android:layout_height="55dp"
+                    android:contentDescription="@string/quill_icon"
+                    android:src="@drawable/ic_banner" />
+
+                <TextView
+                    android:id="@+id/scribes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/script"
+                    android:text="@string/scribes_title"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="40sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_edit_text"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_form_banner"
+                    android:fontFamily="@font/titles"
+                    android:text="@string/add_your_publication"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:id="@+id/layoutImageBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp">
+
+                    <ImageView
+                        android:id="@+id/bookImage"
+                        android:layout_width="200dp"
+                        android:layout_height="300dp"
+                        android:background="@drawable/book_button"
+                        android:contentDescription="@string/profile_image"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/textAddBookImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/book_cover_image"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/bookImageError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="@string/photo_is_required"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:visibility="gone" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutBookTitle"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/book_title"
+                    app:endIconMode="clear_text"
+                    app:hintTextAppearance="@style/TextLabel"
+                    app:startIconDrawable="@drawable/ic_book_title">
+
+                    <EditText
+                        android:id="@+id/etBookTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Book Title"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        tools:ignore="LabelFor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/bookTitleError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/book_title_error_text"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:visibility="gone" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutBookSynopsis"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="@string/book_synopsis"
+                    app:endIconMode="clear_text"
+                    app:hintTextAppearance="@style/TextLabel"
+                    app:startIconDrawable="@drawable/ic_nav_book">
+
+                    <EditText
+                        android:id="@+id/etBookSynopsis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="About Yourself"
+                        android:fadeScrollbars="false"
+                        android:gravity="top|start"
+                        android:inputType="textMultiLine"
+                        android:lines="10"
+                        android:maxLines="30"
+                        android:minLines="1"
+                        android:scrollbars="vertical"
+                        tools:ignore="LabelFor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/bookSynopsisError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/synopsis_error_text"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/bookPublishButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/custom_button"
+                        android:fontFamily="@font/titles"
+                        android:paddingStart="30dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="30dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/publish_btn"
+                        android:textColor="@color/black"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/quill"
+                android:contentDescription="@string/pen_icon"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
