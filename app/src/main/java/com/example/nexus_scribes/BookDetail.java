@@ -4,11 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import com.example.nexus_scribes.firestoreData.UploadBook;
-
 
 import com.squareup.picasso.Picasso;
 
@@ -50,6 +48,7 @@ public class BookDetail extends AppCompatActivity {
             Picasso.get().load(imageProfile)
                     .resize(90,90)
                     .centerCrop().into(ivProfileImage);
+
 
             CardView cardView = findViewById(R.id.book_author_call);
             cardView.setOnClickListener(view ->

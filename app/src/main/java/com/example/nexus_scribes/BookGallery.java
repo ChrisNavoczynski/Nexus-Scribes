@@ -48,7 +48,7 @@ public class BookGallery extends AppCompatActivity implements BookAdapter.Select
 
     @SuppressLint("NotifyDataSetChanged")
     private void EventChangeListener() {
-        fb.collection(Constants.KEY_COLLECTIONS_BOOKS).orderBy(Constants.KEY_BOOK_TITLE,
+        fb.collection(Constants.KEY_COLLECTION_ALL_BOOKS).orderBy(Constants.KEY_BOOK_TITLE,
                 Query.Direction.ASCENDING)
                 .addSnapshotListener((value, error) -> {
 

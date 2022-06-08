@@ -2,7 +2,8 @@ package com.example.nexus_scribes.utilities;
 
 public class Constants {
     public static final String KEY_COLLECTIONS_USERS = "users";
-    public static final String KEY_COLLECTIONS_BOOKS = "books";
+    public static final String KEY_COLLECTIONS_BOOKS = "userBooks";
+    public static final String KEY_COLLECTION_ALL_BOOKS = "books";
     public static final String KEY_USER_ID = "userId";
     public static final String KEY_FULL_NAME = "fullName";
     public static final String KEY_EMAIL = "email";
