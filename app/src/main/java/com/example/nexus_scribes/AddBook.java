@@ -39,10 +39,10 @@ public class AddBook extends AppCompatActivity {
     String fullName;
     String penName;
     String imageProfile;
-    String userBio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         binding = AddBookBinding.inflate(getLayoutInflater());
         storageReference = FirebaseStorage.getInstance().getReference(Constants.KEY_COLLECTIONS_BOOKS);
@@ -57,7 +57,12 @@ public class AddBook extends AppCompatActivity {
             String userId = Objects.requireNonNull(myAuth.getCurrentUser()).getUid();
             UserProfileViewModel viewModel = new UserProfileViewModel();
             DocumentReference documentReference = fb
+                    .collection(Constants.KEY_COLLECTIONS_USERS)
+                    .document(userId)
                     .collection(Constants.KEY_COLLECTIONS_BOOKS)
+                    .document();
+            DocumentReference documentReference2 = fb
+                    .collection(Constants.KEY_COLLECTION_ALL_BOOKS)
                     .document();
             String bookId = documentReference.getId();
             viewModel.getProfileInfo(
@@ -65,7 +70,6 @@ public class AddBook extends AppCompatActivity {
                     fullName = profileInfo.getFullName();
                     penName = profileInfo.getPenName();
                     imageProfile = profileInfo.getImageProfile();
-                    userBio = profileInfo.getUserBio();
                 });
             StorageReference fileReference = storageReference
                     .child(binding.etBookTitle.getText().toString()
@@ -84,10 +88,10 @@ public class AddBook extends AppCompatActivity {
                                                         downloadUri.toString(),
                                                         binding.etBookTitle.getText().toString(),
                                                         binding.etBookSynopsis.getText().toString(),
-                                                        imageProfile,
-                                                        userBio
+                                                        imageProfile
                                                 );
                                         documentReference.set(uploadBook);
+                                        documentReference2.set(uploadBook);
                                     }));
             startActivity(new Intent(getApplicationContext(),
                     UserProfile.class));

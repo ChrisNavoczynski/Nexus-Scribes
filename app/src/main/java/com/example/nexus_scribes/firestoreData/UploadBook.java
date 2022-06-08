@@ -10,16 +10,14 @@ public class UploadBook implements Serializable {
     public String bookImage;
     public String bookTitle;
     public String bookSynopsis;
-
     public String imageProfile;
-    public String userBio;
 
     public UploadBook() {
         // Empty Constructor
     }
 
     public UploadBook(String bookId, String fullName, String penName, String bookImage,
-                      String bookTitle, String bookSynopsis, String imageProfile, String userBio) {
+                      String bookTitle, String bookSynopsis, String imageProfile) {
         this.bookId = bookId;
         this.fullName = fullName;
         this.penName = penName;
@@ -27,7 +25,6 @@ public class UploadBook implements Serializable {
         this.bookTitle = bookTitle;
         this.bookSynopsis = bookSynopsis;
         this.imageProfile = imageProfile;
-        this.userBio = userBio;
     }
 
     public String getBookId() {
@@ -82,13 +79,5 @@ public class UploadBook implements Serializable {
 
     public void setImageProfile(String imageProfile) {
         this.imageProfile = imageProfile;
-    }
-
-    public String getUserBio() {
-        return userBio;
-    }
-
-    public void setUserBio(String userBio) {
-        this.userBio = userBio;
     }
 }
