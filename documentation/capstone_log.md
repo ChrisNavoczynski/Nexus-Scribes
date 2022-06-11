@@ -203,21 +203,21 @@ _5 hours_
 - Began work on AddBook Java Class
 
 ## Week 5/28/2022 - 6/3/2022
-### Total Hours:
+### Total Hours: 35
 
 __May 29th 2022__
-_10 hours_
+_12 hours_
 - Created the Book Model Java class
 - Created the BookViewModel Java class
 - Created the UploadBook Firestore Java class
 
 __May 30th 2022__
-_8 hours_
+_11 hours_
 - Created the BookAdapter Java class
 - Completed the AddBook Java Class
 
 __May 31st 2022__
-_10 hours_
+_12 hours_
 - Created the book_card.xml recycler layout
 - Created the book_gallery.xml layout  
 - Created the book_detail.xml layout
@@ -226,3 +226,34 @@ _10 hours_
 
 #### Milestone 7 Complete 
 _(Note: Milestone 7 consisted of 3 Issues)_
+
+## Week 6/4/2022 - 6/10/2022
+### Total Hours: 30
+
+__June 4th 2022__
+_8 hours_
+- Updated the Firestore Collection
+- Research video and article links for Android 
+
+__June 5th 2022__
+_12 hours_
+- Created the home_page.xml layout
+- Created the video_view.xml layout
+
+__June 6th 2022__
+_10 hours_
+- Created the YouTubeVideo Java class model
+- Created the Video Adapter Java class
+
+__June 10th 2022__
+_10 hours_
+- Created the Home Page Java class
+
+#### Milestone 8 Complete
+_(Note: Milestone 8 consisted of 2 Issues)_
+
+## Week 6/11/2022 - 6/17/2022
+### Total Hours: 
+
+__June 14th 2022__
+- CLASS CAPSTONE FINAL PRESENTATION
