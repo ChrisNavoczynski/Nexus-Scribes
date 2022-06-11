@@ -28,7 +28,6 @@ public class BookGallery extends AppCompatActivity implements BookAdapter.Select
     BookAdapter bookAdapter;
     FirebaseFirestore fb;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +56,7 @@ public class BookGallery extends AppCompatActivity implements BookAdapter.Select
                         return;
                     }
 
-                    assert value != null;
+                      assert value != null;
                     for (DocumentChange dc : value.getDocumentChanges()) {
 
                         if (dc.getType() == DocumentChange.Type.ADDED){

@@ -7,7 +7,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import com.example.nexus_scribes.firestoreData.UploadBook;
-
 import com.squareup.picasso.Picasso;
 
 public class BookDetail extends AppCompatActivity {
