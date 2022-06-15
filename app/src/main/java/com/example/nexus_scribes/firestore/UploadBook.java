@@ -1,4 +1,4 @@
-package com.example.nexus_scribes.firestoreData;
+package com.example.nexus_scribes.firestore;
 
 import java.io.Serializable;
 

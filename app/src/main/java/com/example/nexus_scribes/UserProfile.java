@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.nexus_scribes.databinding.UserProfileBinding;
-import com.example.nexus_scribes.firestoreData.UploadUser;
+import com.example.nexus_scribes.firestore.UploadUser;
 import com.example.nexus_scribes.utilities.Constants;
 
 import com.example.nexus_scribes.viewModels.UserProfileViewModel;
@@ -106,7 +106,7 @@ public class UserProfile extends AppCompatActivity {
     }
 
     public void ClickChat(View view) {
-        HomePage.redirectActivity(this, ChatForum.class);
+        HomePage.redirectActivity(this, CurrentUser.class);
     }
 
     public void ClickSettings(View view) {

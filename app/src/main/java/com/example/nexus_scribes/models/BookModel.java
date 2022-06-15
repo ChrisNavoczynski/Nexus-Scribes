@@ -1,6 +1,6 @@
 package com.example.nexus_scribes.models;
 
-import com.example.nexus_scribes.firestoreData.UploadBook;
+import com.example.nexus_scribes.firestore.UploadBook;
 import com.example.nexus_scribes.utilities.Constants;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;

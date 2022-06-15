@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,11 +18,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.nexus_scribes.adapters.BookAdapter;
 import com.example.nexus_scribes.adapters.VideoAdapter;
 import com.example.nexus_scribes.databinding.HomePageBinding;
-import com.example.nexus_scribes.firestoreData.UploadBook;
+import com.example.nexus_scribes.firestore.UploadBook;
 import com.example.nexus_scribes.models.YouTubeVideos;
 import com.example.nexus_scribes.utilities.Constants;
 import com.example.nexus_scribes.viewModels.BookViewModel;
-import com.example.nexus_scribes.viewModels.UserProfileViewModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -151,7 +149,7 @@ public class HomePage extends AppCompatActivity implements BookAdapter.SelectBoo
     }
 
     public void ClickChat(View view) {
-        redirectActivity(this, ChatForum.class);
+        redirectActivity(this, CurrentUser.class);
     }
 
     public void ClickSettings(View view) {

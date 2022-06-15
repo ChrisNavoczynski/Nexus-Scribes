@@ -12,7 +12,7 @@ import android.view.View;
 
 import com.example.nexus_scribes.adapters.BookAdapter;
 import com.example.nexus_scribes.databinding.BookGalleryBinding;
-import com.example.nexus_scribes.firestoreData.UploadBook;
+import com.example.nexus_scribes.firestore.UploadBook;
 import com.example.nexus_scribes.utilities.Constants;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -98,7 +98,7 @@ public class BookGallery extends AppCompatActivity implements BookAdapter.Select
     }
 
     public void ClickChat(View view) {
-        HomePage.redirectActivity(this, ChatForum.class);
+        HomePage.redirectActivity(this, CurrentUser.class);
     }
 
     public void ClickSettings(View view) {

@@ -1,7 +1,6 @@
 package com.example.nexus_scribes.viewModels;
 
-import com.example.nexus_scribes.firestoreData.UploadBook;
-import com.example.nexus_scribes.firestoreData.UploadUser;
+import com.example.nexus_scribes.firestore.UploadBook;
 import com.example.nexus_scribes.models.BookModel;
 import com.google.firebase.firestore.DocumentSnapshot;
 

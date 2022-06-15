@@ -44,7 +44,7 @@ public class UserSettings extends AppCompatActivity {
     }
 
     public void ClickChat(View view) {
-        HomePage.redirectActivity(this, ChatForum.class);
+        HomePage.redirectActivity(this, CurrentUser.class);
     }
 
     public void ClickSettings(View view) {

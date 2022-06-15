@@ -5,15 +5,23 @@
       <map>
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.162" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/background_banner.xml" value="0.251" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/background_chat_bottom.xml" value="0.2935" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/background_chat_input.xml" value="0.112" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/background_chat_top.xml" value="0.144" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/background_edit_text.xml" value="0.1" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/background_form_banner.xml" value="0.111" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/background_icon.xml" value="0.2935" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/background_image.xml" value="0.1315" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/background_nav_drawer.xml" value="0.209" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/background_receive_message.xml" value="0.1315" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/background_sent_message.xml" value="0.1315" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/background_title.xml" value="0.249" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/book_button.xml" value="0.261" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/custom_button.xml" value="0.249" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/date_botton.xml" value="0.1645" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/date_button.xml" value="0.242" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/home_news_banner.xml" value="0.242" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/ic_back.xml" value="0.204" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/ic_book_title.xml" value="0.261" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/ic_calendar.xml" value="0.261" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/ic_email.xml" value="0.188" />
@@ -33,7 +41,9 @@
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/ic_pen_name.xml" value="0.132" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/ic_twitter.xml" value="0.1435" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/ic_user_name.xml" value="0.132" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/my_msg.xml" value="0.1645" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/drawable/toast_background.xml" value="0.1445" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/activity_chat.xml" value="0.33" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/add_book.xml" value="0.25" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/author_card.xml" value="0.35052083333333334" />
@@ -44,10 +54,18 @@
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/book_detail.xml" value="0.25" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/book_gallery.xml" value="0.221875" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/chat_forum.xml" value="0.221875" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/chat_user_list.xml" value="0.2875905797101449" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/chat_users.xml" value="0.33" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/create_profile.xml" value="0.21" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/current_user.xml" value="0.3234375" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/home_nav_drawer.xml" value="0.3685185185185185" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/home_page.xml" value="0.21385542168674698" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/home_toolbar.xml" value="0.5" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/item_container_receive_message.xml" value="0.25" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/item_container_received_message.xml" value="0.2726449275362319" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/item_container_recent_conversation.xml" value="0.2726449275362319" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/item_container_sent_message.xml" value="0.2875905797101449" />
+        <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/item_container_user.xml" value="0.25" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/login_newprofile.xml" value="0.25" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/user_profile.xml" value="0.18" />
         <entry key="..\:/Users/Chris Navoczynski/Nexus-Scribes/app/src/main/res/layout/user_settings.xml" value="0.221875" />

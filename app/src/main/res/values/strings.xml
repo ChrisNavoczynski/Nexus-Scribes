@@ -67,4 +67,8 @@
     <string name="the_publication_gallery">The Publication Gallery</string>
     <string name="Author_add_name_hint">Meet the Author</string>
     <string name="book_synopsis_text">Book Synopsis</string>
+    <string name="select_user">Chat Forum</string>
+    <string name="active_users">Active Users</string>
+    <string name="currentMessages">CurrentMessages</string>
+    <string name="enter_your_message">Enter your message</string>
 </resources>

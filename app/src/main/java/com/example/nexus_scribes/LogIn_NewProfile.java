@@ -13,16 +13,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.nexus_scribes.databinding.LoginNewprofileBinding;
 import com.example.nexus_scribes.utilities.Constants;
 
+import com.example.nexus_scribes.utilities.PreferenceManager;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class LogIn_NewProfile extends AppCompatActivity {
 
     private LoginNewprofileBinding binding;
+    private PreferenceManager preferenceManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        preferenceManager = new PreferenceManager(getApplicationContext());
         this.setTitle("Login or Create New Profile");
         binding = LoginNewprofileBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -56,6 +60,12 @@ public class LogIn_NewProfile extends AppCompatActivity {
                 .addOnCompleteListener(task -> {
                     if(task.isSuccessful() && task.getResult() != null
                             && task.getResult().getDocuments().size() > 0) {
+                        DocumentSnapshot documentSnapshot = task.getResult().getDocuments().get(0);
+                        preferenceManager.putBoolean(Constants.KEY_IS_SIGNED_IN, true);
+                        preferenceManager.putString(Constants.KEY_USER_ID, documentSnapshot.getId());
+                        preferenceManager.putString(Constants.KEY_FULL_NAME, documentSnapshot.getString(Constants.KEY_FULL_NAME));
+                        preferenceManager.putString(Constants.KEY_PEN_NAME, documentSnapshot.getString(Constants.KEY_PEN_NAME));
+                        preferenceManager.putString(Constants.KEY_USER_IMAGE, documentSnapshot.getString(Constants.KEY_USER_IMAGE));
                         showToast("Successful Log In!");
                         Intent intent = new Intent(getApplicationContext(), HomePage.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
