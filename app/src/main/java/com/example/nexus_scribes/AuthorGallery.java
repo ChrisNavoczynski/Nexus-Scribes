@@ -12,7 +12,7 @@ import android.view.View;
 
 import com.example.nexus_scribes.adapters.AuthorAdapter;
 import com.example.nexus_scribes.databinding.AuthorGalleryBinding;
-import com.example.nexus_scribes.firestoreData.UploadUser;
+import com.example.nexus_scribes.firestore.UploadUser;
 import com.example.nexus_scribes.utilities.Constants;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -29,7 +29,6 @@ public class AuthorGallery extends AppCompatActivity implements AuthorAdapter.Se
     ArrayList<UploadUser> userArrayList;
     AuthorAdapter authorAdapter;
     FirebaseFirestore fb;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +101,7 @@ public class AuthorGallery extends AppCompatActivity implements AuthorAdapter.Se
     }
 
     public void ClickChat(View view) {
-        HomePage.redirectActivity(this, ChatForum.class);
+        HomePage.redirectActivity(this, CurrentUser.class);
     }
 
     public void ClickSettings(View view) {

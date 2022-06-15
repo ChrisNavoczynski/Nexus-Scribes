@@ -7,8 +7,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.nexus_scribes.firestoreData.UploadBook;
-import com.example.nexus_scribes.firestoreData.UploadUser;
+import com.example.nexus_scribes.firestore.UploadUser;
 import com.squareup.picasso.Picasso;
 
 public class AuthorDetail extends AppCompatActivity {

@@ -17,8 +17,8 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.nexus_scribes.databinding.AddBookBinding;
-import com.example.nexus_scribes.firestoreData.UploadBook;
-import com.example.nexus_scribes.firestoreData.UploadUser;
+import com.example.nexus_scribes.firestore.UploadBook;
+import com.example.nexus_scribes.firestore.UploadUser;
 import com.example.nexus_scribes.utilities.Constants;
 import com.example.nexus_scribes.viewModels.UserProfileViewModel;
 import com.google.firebase.auth.FirebaseAuth;

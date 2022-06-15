@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.nexus_scribes.R;
-import com.example.nexus_scribes.firestoreData.UploadUser;
+import com.example.nexus_scribes.firestore.UploadUser;
 import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 

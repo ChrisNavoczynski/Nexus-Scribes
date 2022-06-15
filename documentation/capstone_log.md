@@ -255,5 +255,29 @@ _(Note: Milestone 8 consisted of 2 Issues)_
 ## Week 6/11/2022 - 6/17/2022
 ### Total Hours: 
 
+__June 11th 2022__
+_10 hours_
+- Created current_user.xml layout
+- Created ChatMessage model class
+- Created the CurrentUser Java class
+- Created the UsersAdapter
+
+__June 12th 2022__
+_12 hours_
+- Created 3 of 4 item_container.xml layouts
+- Created the chat_user_list.xml layout
+- Completed ChatUserList java Class
+- Created the ChatAdapter
+
+__June 13th 2022__
+_12 hours_
+- Created the activity_chat.xml layout
+- Completed the ChatActivity java class
+- Created the recent_messages.xml layout
+- created the RecentConversation Adapter
+
+#### Milestone 9 Complete
+
 __June 14th 2022__
+_2 hours_
 - CLASS CAPSTONE FINAL PRESENTATION
